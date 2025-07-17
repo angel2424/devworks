@@ -15,7 +15,9 @@
   import ScrollTrigger from 'gsap/ScrollTrigger'
   import ScrollSmoother from 'gsap/ScrollSmoother'
 
-  gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
+  onMounted(() => {
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
+  })
 
   onMounted(() => {
     ScrollSmoother.create({
