@@ -116,7 +116,9 @@ import processCards from '../assets/json/process-cards.json'
 import services from '../assets/json/services.json'
 import projects from '../assets/json/projects.json'
 
-gsap.registerPlugin(ScrollTrigger)
+onMounted(() => {
+  gsap.registerPlugin(ScrollTrigger)
+})
 
 const container = ref(null)
 const wrapper = ref(null)
