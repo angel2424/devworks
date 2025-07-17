@@ -108,8 +108,8 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
 
 import offerCards from '../assets/json/offer-cards.json'
 import processCards from '../assets/json/process-cards.json'
