@@ -1,19 +1,34 @@
 <template>
-  <VueLenis root>
     <div>
-      <slot />
+        <NavBar />
+        <div id="smooth-wrapper">
+          <div id="smooth-content">
+            <slot />
+          </div>
+        </div>
     </div>
-  </VueLenis>
-</template>
+  </template>
 
-<script setup>
-import { VueLenis, useLenis } from 'lenis/vue'
-import { watch } from 'vue'
+  <script setup>
+  import { onMounted } from 'vue'
+  import gsap from 'gsap'
+  import ScrollTrigger from 'gsap/ScrollTrigger'
+  import ScrollSmoother from 'gsap/ScrollSmoother'
 
-const lenis = useLenis(() => {
-})
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 
-watch(lenis, () => {
+  onMounted(() => {
+    ScrollSmoother.create({
+      wrapper: '#smooth-wrapper',
+      content: '#smooth-content',
+      smooth: 1.5,
+      effects: true,
+    })
+  })
+  </script>
 
-})
-</script>
+  <style>
+  #smooth-content {
+    will-change: transform;
+  }
+  </style>

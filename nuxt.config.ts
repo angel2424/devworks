@@ -6,13 +6,16 @@ export default defineNuxtConfig({
     devtools: { enabled: true },
     css: ['~/assets/css/global.css'],
     vite: {
-            plugins: [tailwindcss(),]
-        },
+        plugins: [tailwindcss(),]
+    },
+    icon: {
+        mode: 'css',
+        cssLayer: 'base'
+    },
     modules: [
         '@nuxt/eslint',
         '@nuxt/fonts',
         '@nuxt/icon',
-        '@nuxt/image',
-        'lenis/nuxt'
+        '@nuxt/image'
     ]
 })

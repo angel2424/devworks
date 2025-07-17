@@ -1,0 +1,32 @@
+[
+    {
+      "id": 1,
+      "icon": "mdi:lightbulb-on",
+      "description": "Costos a la medida de tus necesidades",
+      "image": "money-bag.svg"
+    },
+    {
+      "id": 2,
+      "icon": "ic:round-color-lens",
+      "description": "Diseño personalizado",
+      "image": "figma.svg"
+    },
+    {
+      "id": 3,
+      "icon": "solar:smartphone-bold",
+      "description": "Sitio responsivo y escalable",
+      "image": "responsive.svg"
+    },
+    {
+      "id": 4,
+      "icon": "fluent:content-view-20-filled",
+      "description": "Edición de contenido en un CMS",
+      "image": "cms.svg"
+    },
+    {
+      "id": 5,
+      "icon": "ri:seo-fill",
+      "description": "Optimización SEO",
+      "image": "seo.svg"
+    }
+]

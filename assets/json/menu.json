@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Home",
+    "href": "/",
+    "icon": "fa6-solid:house"
+  },
+  {
+    "name": "Que ofrecemos",
+    "href": "#que-ofrecemos",
+    "icon": "mdi:offer"
+  },
+  {
+    "name": "Servicios",
+    "href": "/servicios",
+    "icon": "home"
+  },
+  {
+    "name": "Preguntas Frecuentes",
+    "href": "/preguntas-frecuentes",
+    "icon": "home"
+  },
+  {
+    "name": "Contacto",
+    "href": "/contacto",
+    "icon": "home"
+  }
+]

@@ -1,0 +1,34 @@
+[
+    {
+        "image": "allende.png",
+        "title": "Municipio de Allende Coahuila",
+        "description": "Diseñamos y desarrollamos el sitio web oficial del municipio de Allende Coahuila, con un diseño moderno y funcional. Incluye información sobre servicios, noticias y tramites. Se integró un sistema de gestión de contenidos para facilitar la actualización de la información.",
+        "link": "https://allendecoahuila.com/",
+        "type": "Diseño/Desarrollo Web",
+        "category": "Sitio Municipal"
+    },
+    {
+        "image": "goodmemx.jpg",
+        "title": "Good Memories",
+        "description": "Diseñamos y desarrollamos un sitio web para Good Memories, un emprendimiento dedicado a la fotografía y video de eventos. El sitio incluye una galería de trabajos, información de servicios y un formulario de contacto.",
+        "link": "https://example.com/project2",
+        "type": "Diseño/Desarrollo Web",
+        "category": "Fotografía"
+    },
+    {
+        "image": "wedding_invitation.jpg",
+        "title": "Creative Design Project",
+        "description": "A creative design project that combines art and technology to create stunning visuals.",
+        "link": "https://example.com/project3",
+        "type": "Diseño/Desarrollo Web",
+        "category": "Design"
+    },
+    {
+        "image": "bible-display.png",
+        "title": "Project Title",
+        "description": "This is a brief description of the project. It highlights the main features and technologies used.",
+        "link": "https://example.com/project1",
+        "type": "Diseño/Desarrollo Web",
+        "category": "Photography"
+    }
+]

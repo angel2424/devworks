@@ -1,0 +1,44 @@
+[
+    {
+        "id": "1",
+        "icon": "fa6-solid:phone",
+        "process_name": "Descubrimiento",
+        "process_description": "¡Nos conocemos por primera vez! Aquí lo más importante es conocerte a ti y a tu negocio. Veremos el estado actual de tu presencia en línea y analizamos los problemas que necesitamos resolver con un sitio web, al igual que conocer tus expectativas y requisitos para el proyecto.",
+        "img_url": "first-call.jpg"
+    },
+    {
+        "id": "2",
+        "icon": "fa6-solid:file-contract",
+        "process_name": "Propuesta",
+        "process_description": "Basado en lo conversado en el descubrimiento, se analizará y desarrollará una propuesta. Esta definirá la estructura del sitio, paginas a incluir, tiempo estimado para cada etapa del proyecto, fechas y cantidad de revisiones, y costo total del proyecto con un desglose detallado de este mismo.",
+        "img_url": "quote-img.jpg"
+    },
+    {
+        "id": "3",
+        "icon": "fa6-solid:file-signature",
+        "process_name": "Contrato y pago inicial",
+        "process_description": "Una vez aceptada la propuesta se pasa a la firma de contrato donde se ha definido cada punto mencionado en la propuesta. También se pide el 50% del costo total del proyecto por adelantado para poder iniciar con su desarrollo.",
+        "img_url": "payment.jpg"
+    },
+    {
+        "id": "4",
+        "icon": "fa6-solid:swatchbook",
+        "process_name": "Inicio de proyecto (Diseño)",
+        "process_description": "Desde el momento que se recibe el pago inicial se empieza el trabajo de diseño. Este conlleva 3 etapas: 1. Look and feel - Se definen colores, tipografía y estilos generales, 2. Wireframes, 3. Diseño final. En cada etapa se permite 1 revisión",
+        "img_url": "design.jpg"
+    },
+    {
+        "id": "5",
+        "icon": "fa6-solid:code",
+        "process_name": "Desarrollo",
+        "process_description": "Una vez aprobado el diseño, comienza el desarrollo del sitio. Cada uno de nuestros proyectos se conecta a un CMS ( Content Management System ) el cual te permite editar contenido de tu sitio sin nuestra intervención. Al terminar el desarrollo se hace una última revisión completa.",
+        "img_url": "development.jpg"
+    },
+    {
+        "id": "6",
+        "icon": "fa6-solid:hand-holding-heart",
+        "process_name": "Entrega del proyecto",
+        "process_description": "¡Ya estamos listos para compartir tu sitio con el mundo! Una vez se haga el pago final del proyecto, se conecta el sitio al dominio indicado y se sube a producción para que tus usuarios puedan empezar a disfrutar de tu nuevo sitio.",
+        "img_url": "handoff.jpg"
+    }
+]

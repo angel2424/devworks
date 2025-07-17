@@ -1,0 +1,29 @@
+[
+    {
+        "id": "1",
+        "name": "Diseño y Desarrollo Web",
+        "description": [
+            "Creamos tu página web desde cero, completamente personalizada según lo que tu marca necesita. Nos encargamos de todo: diseño visual, estructura, textos, enlaces, formularios y que se vea bien en celular, tablet y computadora.",
+            "Además, tu sitio estará optimizado para que las personas te encuentren fácilmente en Google y puedas convertir visitantes en clientes reales."
+        ],
+        "target_audience": "Ideal para emprendedores, negocios y marcas que quieren verse profesionales en internet."
+    },
+    {
+        "id": "2",
+        "name": "Diseño UI/UX",
+        "description": [
+            "Nos enfocamos en que tu web sea fácil de entender, agradable de navegar y que guíe a tus visitantes paso a paso hasta contactarte o comprar.",
+            "Diseñamos la “ruta” perfecta para que las personas no se pierdan, encuentren lo que buscan y vivan una experiencia que los haga confiar en tu marca."
+        ],
+        "target_audience": "Ideal para emprendedores, negocios y marcas que quieren verse profesionales en internet."
+    },
+    {
+        "id": "3",
+        "name": "Mantenimiento web",
+        "description": [
+            "Con este servicio nos encargamos de cuidar tu web mes a mes: actualizamos plugins, revisamos que todo funcione correctamente, realizamos copias de seguridad y resolvemos errores que puedan surgir.",
+            "Así, tú puedes estar tranquilo mientras nosotros nos aseguramos de que tu sitio esté siempre activo, seguro y en buen estado."
+        ],
+        "target_audience": "Ideal para quienes ya tienen sitio pero necesitan soporte confiable."
+    }
+]
