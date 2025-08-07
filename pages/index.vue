@@ -27,8 +27,6 @@
                     Diseñamos con propósito, entregamos con impacto.
                 </h2>
             </div>
-
-            <!-- Horizontal Scroll Wrapper -->
             <div
                 ref="wrapper"
                 class="grid grid-cols-1 md:grid-cols-2 xl:flex gap-8 mt-24 xl:px-[25vw]"
@@ -57,7 +55,7 @@
         <section id="servicios" class="pb-20 pt-12 flex flex-col md:items-center px-5 md:px-14">
             <div class="flex flex-col lg:flex-row justify-between gap-8 lg:gap-20 lg:items-center">
                 <div class="flex-1">
-                    <Badge class="mb-5">Nuestros Servicios</Badge>
+                    <Badge class="mb-8">Nuestros Servicios</Badge>
                     <h2 class="!text-3xl font-medium text-blue">Creamos soluciones digitales que impulsan tu marca</h2>
                 </div>
                 <div class="flex-1 text-base font-light">
@@ -65,16 +63,16 @@
                     </p>
                 </div>
             </div>
-            <div class="text-blue mt-12 flex flex-col w-full gap-10">
+            <div class="text-blue mt-16 w-full gap-10 grid grid-cols-1 xl:grid-cols-2">
                 <div v-for="service in services" :key="service?.id" class="border border-primary/40 rounded-2xl p-10 flex flex-col gap-8">
                     <div class="flex justify-between items-center">
                         <span class="cal-sans text-2xl text-primary">0{{ service?.id }}</span>
                         <h4 class="mb-8 font-medium text-primary text-2xl">{{ service?.name }}</h4>
                     </div>
                     <span class="w-full h-[1px] bg-primary/30" />
-                    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
+                    <p v-for="(desc, index) in service?.description" :key="index" class="text-base">{{ desc }}</p>
+                    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mt-auto">
                         <div class="flex-1 max-w-3xl flex flex-col gap-8">
-                            <p v-for="(desc, index) in service?.description" :key="index" class="text-base">{{ desc }}</p>
                             <p class="text-base text-primary/65 italic">👤 {{ service?.target_audience }}</p>
                         </div>
                         <Button href="/contacto" icon="ic:outline-whatsapp" class="w-fit h-fit mt-8">Cotizar servicio</Button>
@@ -100,20 +98,61 @@
                         </span>
                     </div>
                     <p class="text-base">{{ project?.description }}</p>
-                    <!-- <Button :href="{project?.link}" icon-right="fa6-solid:chevron-right" class="w-fit h-fit !px-4 !py-3 mt-8">Visitar sitio</Button> -->
+                    <Button :href="project?.link" target="_blank" icon-right="fa6-solid:chevron-right" class="w-fit h-fit !px-4 !py-3 mt-8">Visitar sitio</Button>
                 </div>
             </div>
         </section>
         <div class="px-5 md:px-14">
-            <span class="inline-block bg-primary/30 h-[1px] w-full my-16" />
+            <span class="inline-block bg-primary/30 h-[1px] w-full mb-3 mt-16" />
         </div>
-        <section class="pb-20 pt-20 flex flex-col md:items-center px-5 md:px-14">
+        <section class="pb-20 pt-20 flex flex-col items-center px-5 md:px-14">
             <Badge class="mb-5">Ellos ya confiaron en nosotros</Badge>
+            <div class="flex flex-col xl:flex-row gap-8 mt-8">
+                <img
+                    src="/img/logo-allende.png"
+                    alt="Logo de Allende, Coahuila"
+                    class=" w-64 h-auto"
+                />
+                <img
+                    src="/img/logo-goodmemx-piedras-negras.png"
+                    alt="Logo de Good Memories | Piedras Negras, Coahuila"
+                    class=" w-64 h-auto"
+                />
+            </div>
         </section>
         <div class="px-5 md:px-14">
-            <span class="inline-block bg-primary/30 h-[1px] w-full my-16" />
+            <span class="inline-block bg-primary/30 h-[1px] w-full mt-3 mb-16" />
         </div>
-
+        <section class="pb-20 pt-20 flex flex-col xl:flex-row gap-16 xl:gap-32 items-center justify-center px-5 md:px-14">
+            <img
+                src="/img/asterisk.png"
+                alt="Asset geometrico | Piedras Negras, Coahuila | Agencia Web"
+                class=" w-40"
+            >
+            <div class="flex flex-col gap-8">
+                <h2 class="!text-5xl font-bold text-blue max-w-4xl">¿Listo para aumentar tu presencia en linea?</h2>
+                <p class="text-lg font-light max-w-3xl">Contáctanos en Whatsapp por el siguiente botón o al numero de abajo para agendar la llamada inicial (sin compromiso 😉)</p>
+                <div class="flex flex-col xl:flex-row items-center justify-between mt-24">
+                    <Button href="/" target="_blank" icon="ic:outline-whatsapp" class="w-fit h-fit !px-4 !py-3">Solicita tu cotización por WhatsApp</Button>
+                    <div class="flex items-center gap-6 text-primary text-base">
+                        <div class="flex items-center gap-3">
+                            <Icon name="ic:outline-email" size="1.2rem" class="z-10" />
+                            <a href="mailto:contacto@devworksstudio.site">contacto@devworksstudio.site</a>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <Icon name="ic:outline-local-phone" size="1.2rem" class="z-10" />
+                            <a href="tel:+528783821281">(878) 382-1281</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="px-5 md:px-14">
+            <span class="inline-block bg-primary/30 h-[1px] w-full mt-3 mb-16" />
+        </div>
+        <section class="pb-20 pt-20 flex flex-col md:items-center px-5 md:px-14 object-contain object-center" style="background-image: url('/img/footer-bg.jpg');">
+            <img src="/img/dw-logo.svg" alt="DevWorks Studio | Agencia de diseño web en Piedras Negras">
+        </section>
     </main>
 </template>
 

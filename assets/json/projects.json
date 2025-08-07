@@ -11,22 +11,22 @@
         "image": "goodmemx.jpg",
         "title": "Good Memories",
         "description": "Diseñamos y desarrollamos un sitio web para Good Memories, un emprendimiento dedicado a la fotografía y video de eventos. El sitio incluye una galería de trabajos, información de servicios y un formulario de contacto.",
-        "link": "https://example.com/project2",
+        "link": "https://goodmemx.devworksstudio.site",
         "type": "Diseño/Desarrollo Web",
         "category": "Fotografía"
     },
     {
         "image": "wedding_invitation.jpg",
-        "title": "Creative Design Project",
-        "description": "A creative design project that combines art and technology to create stunning visuals.",
-        "link": "https://example.com/project3",
+        "title": "Invitación digital para bodas",
+        "description": "Trabajamos en crear una opción para que las parejas que estén por casarse, puedan compartir toda la información de su día especial.",
+        "link": "https://vowandbeyond.framer.website",
         "type": "Diseño/Desarrollo Web",
         "category": "Design"
     },
     {
         "image": "bible-display.png",
-        "title": "Project Title",
-        "description": "This is a brief description of the project. It highlights the main features and technologies used.",
+        "title": "Bible Display",
+        "description": "Diseñamos y desarrollamos esta herramienta sencilla y moderna que ayuda a las iglesias a mostrar pasajes de la Biblia en pantallas de forma clara y organizada durante sus reuniones. Todo se controla fácilmente desde un celular, sin necesidad de programas complicados. Ideal para mantener a la congregación enfocada y conectada con la lectura bíblica en tiempo real.",
         "link": "https://example.com/project1",
         "type": "Diseño/Desarrollo Web",
         "category": "Photography"
