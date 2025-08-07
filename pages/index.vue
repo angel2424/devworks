@@ -1,7 +1,7 @@
 <template>
     <main class="body">
         <Hero />
-        <section class="pb-20 flex flex-col md:items-center px-5 md:px-14">
+        <section id="que-ofrecemos" class="pb-20 flex flex-col md:items-center px-5 md:px-14">
             <Badge class="mb-5">Lo que te ofrecemos</Badge>
             <h2 class="!text-3xl font-medium text-blue max-w-xl md:text-center">Resolvemos problemas con procesos creativos.</h2>
             <div class="text-blue mt-12 grid grid-cols-6 gap-3 w-full">
@@ -17,6 +17,7 @@
             </div>
         </section>
         <section
+            id="nuestro-proceso"
             ref="container"
             class="py-20 flex flex-col items-start justify-center px-5 md:px-14 relative xl:h-screen xl:overflow-hidden"
         >
@@ -53,7 +54,7 @@
                 </div>
             </section>
 
-        <section class="pb-20 pt-12 flex flex-col md:items-center px-5 md:px-14">
+        <section id="servicios" class="pb-20 pt-12 flex flex-col md:items-center px-5 md:px-14">
             <div class="flex flex-col lg:flex-row justify-between gap-8 lg:gap-20 lg:items-center">
                 <div class="flex-1">
                     <Badge class="mb-5">Nuestros Servicios</Badge>
@@ -81,7 +82,7 @@
                 </div>
             </div>
         </section>
-        <section class="pb-20 pt-20 flex flex-col md:items-center px-5 md:px-14">
+        <section id="proyectos" class="pb-20 pt-20 flex flex-col md:items-center px-5 md:px-14">
             <Badge class="mb-5">Nuestro Trabajo</Badge>
             <h2 class="!text-3xl font-medium text-blue max-w-xl md:text-center">Algunos de nuestros proyectos recientes</h2>
             <div class="text-blue mt-12 grid grid-cols-1 xl:grid-cols-2 gap-16 w-full">
@@ -103,6 +104,16 @@
                 </div>
             </div>
         </section>
+        <div class="px-5 md:px-14">
+            <span class="inline-block bg-primary/30 h-[1px] w-full my-16" />
+        </div>
+        <section class="pb-20 pt-20 flex flex-col md:items-center px-5 md:px-14">
+            <Badge class="mb-5">Ellos ya confiaron en nosotros</Badge>
+        </section>
+        <div class="px-5 md:px-14">
+            <span class="inline-block bg-primary/30 h-[1px] w-full my-16" />
+        </div>
+
     </main>
 </template>
 
@@ -118,6 +129,43 @@ import projects from '../assets/json/projects.json'
 
 onMounted(() => {
   gsap.registerPlugin(ScrollTrigger)
+})
+
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "DevWorks Studio",
+        "image": "https://devworks-studio.netlify.app/your-logo-or-cover.jpg",
+        "url": "https://devworks-studio.netlify.app",
+        "description": "Diseño web profesional, UI/UX y desarrollo para negocios en Piedras Negras. Rápido, personalizado y enfocado en generar clientes.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Piedras Negras",
+          "addressRegion": "Coahuila",
+          "addressCountry": "MX"
+        },
+        "areaServed": {
+          "@type": "Place",
+          "name": "Piedras Negras, Coahuila"
+        },
+        "hasMap": "https://goo.gl/maps/zZexample",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+52-1-878-382-1281",
+          "contactType": "Customer Service",
+          "availableLanguage": ["Spanish", "English"]
+        },
+        "sameAs": [
+          "https://www.instagram.com/devworksstudio",
+          "https://www.facebook.com/devowrksstudio"
+        ]
+      })
+    }
+  ]
 })
 
 const container = ref(null)

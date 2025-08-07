@@ -3,6 +3,8 @@
 
 @import "tailwindcss";
 
+@import "tw-animate-css";
+
 @theme {
   --color-primary: #1E48DB;
   --color-title: #01161E;

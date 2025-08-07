@@ -1,7 +1,7 @@
 [
   {
     "name": "Home",
-    "href": "/",
+    "href": "#hero",
     "icon": "fa6-solid:house"
   },
   {
@@ -10,18 +10,18 @@
     "icon": "mdi:offer"
   },
   {
-    "name": "Servicios",
-    "href": "/servicios",
+    "name": "Nuestro Proceso",
+    "href": "#nuestro-proceso",
     "icon": "home"
   },
   {
-    "name": "Preguntas Frecuentes",
-    "href": "/preguntas-frecuentes",
+    "name": "Servicios",
+    "href": "#servicios",
     "icon": "home"
   },
   {
     "name": "Contacto",
-    "href": "/contacto",
+    "href": "#contacto",
     "icon": "home"
   }
 ]

@@ -13,9 +13,10 @@ export default defineNuxtConfig({
         cssLayer: 'base'
     },
     modules: [
-        '@nuxt/eslint',
-        '@nuxt/fonts',
-        '@nuxt/icon',
-        '@nuxt/image'
+      '@nuxt/eslint',
+      '@nuxt/fonts',
+      '@nuxt/icon',
+      '@nuxt/image',
+      'shadcn-nuxt',
     ]
 })
