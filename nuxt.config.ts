@@ -2,6 +2,10 @@
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
+     ssr: false,
+        nitro: {
+            preset: 'static'
+        },
     compatibilityDate: '2024-11-01',
     devtools: { enabled: true },
     css: ['~/assets/css/global.css'],
@@ -21,6 +25,13 @@ export default defineNuxtConfig({
       'nuxt-gtag',
       '@nuxtjs/sitemap',
     ],
+    gtag: {
+        id: 'G-TZPJKZ4ZJH',
+        config: {
+        anonymize_ip: true,
+        },
+        debug: false,
+    },
     sitemap: {
         siteUrl: 'https://devworksstudio.site',
         gzip: true,
