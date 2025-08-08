@@ -10,7 +10,7 @@
                         <Icon :name="card?.icon" size="1.5rem" class="text-primary" />
                     </span>
                     <div class="flex justify-center">
-                        <img :src="`/img/${card?.image}`" alt="" class="w-28 h-28">
+                        <NuxtImg :src="`/img/${card?.image}`" format="webp" alt="Imagen de oferta | Agencia en Piedras Negras, Coahuila" class="w-28 h-28" />
                     </div>
                     <p class="text-base">{{ card?.description }}</p>
                 </div>
@@ -29,7 +29,7 @@
             </div>
             <div
                 ref="wrapper"
-                class="grid grid-cols-1 md:grid-cols-2 xl:flex gap-8 mt-24 xl:px-[25vw]"
+                class="grid grid-cols-1 md:grid-cols-2 xl:flex gap-8 mt-24 xl:px-[25vw] will-change-transform"
             >
                     <div
                         v-for="card in processCards"
@@ -37,7 +37,7 @@
                         class="bg-card border border-border-blue rounded-2xl p-6 flex flex-col gap-4 xl:flex-row xl:min-w-[60vw] xl:w-fit h-full"
                     >
                         <div class="flex justify-center mb-4 xl:mb-0">
-                            <img :src="`/img/${card?.img_url}`" alt="" class="w-full xl:min-w-[400px] h-auto object-center object-cover rounded-2xl aspect-video">
+                            <NuxtImg :src="`/img/${card?.img_url}`" format="webp" alt="Proceso | Agencia de desarrollo web en Piedras Negras" class="w-full xl:min-w-[400px] h-auto object-center object-cover rounded-2xl aspect-video" />
                         </div>
                         <div class="px-6 py-8 flex flex-col justify-center">
                             <div class="mb-4">
@@ -86,7 +86,7 @@
             <div class="text-blue mt-12 grid grid-cols-1 xl:grid-cols-2 gap-16 w-full">
                 <div v-for="(project, index) in projects" :key="index" class="flex flex-col gap-8">
                     <div class="flex justify-center items-center p-14 bg-gradient-to-br from-primary/10 to-primary/20 rounded-2xl overflow-hidden">
-                        <img :src="`/img/${project?.image}`" :alt="project?.alt" class="w-auto h-96 object-contain rounded-2xl">
+                        <NuxtImg :src="`/img/${project?.image}`" format="webp" :alt="project?.alt" class="w-auto h-96 object-contain rounded-2xl" />
                     </div>
                     <div class="flex justify-between items-center">
                         <div>
@@ -108,13 +108,15 @@
         <section class="pb-20 pt-20 flex flex-col items-center px-5 md:px-14">
             <Badge class="mb-5">Ellos ya confiaron en nosotros</Badge>
             <div class="flex flex-col xl:flex-row gap-8 mt-8">
-                <img
+                <NuxtImg
                     src="/img/logo-allende.png"
+                    format="webp"
                     alt="Logo de Allende, Coahuila"
                     class=" w-64 h-auto"
                 />
-                <img
+                <NuxtImg
                     src="/img/logo-goodmemx-piedras-negras.png"
+                    format="webp"
                     alt="Logo de Good Memories | Piedras Negras, Coahuila"
                     class=" w-64 h-auto"
                 />
@@ -124,11 +126,12 @@
             <span class="inline-block bg-primary/30 h-[1px] w-full mt-3 mb-16" />
         </div>
         <section class="pb-20 pt-20 flex flex-col xl:flex-row gap-16 xl:gap-32 items-center justify-center px-5 md:px-14">
-            <img
+            <NuxtImg
                 src="/img/asterisk.png"
+                format="webp"
                 alt="Asset geometrico | Piedras Negras, Coahuila | Agencia Web"
                 class=" w-40"
-            >
+            />
             <div class="flex flex-col gap-8">
                 <h2 class="!text-5xl font-bold text-blue max-w-4xl">¿Listo para aumentar tu presencia en linea?</h2>
                 <p class="text-lg font-light max-w-3xl">Contáctanos en Whatsapp por el siguiente botón o al numero de abajo para agendar la llamada inicial (sin compromiso 😉)</p>
@@ -152,10 +155,10 @@
         </div>
         <footer class="pb-20 pt-20 px-5 md:px-14 bg-no-repeat bg-center bg-cover xl:bg-contain object-center flex flex-col gap-16" style="background-image: url('/img/footer-bg.jpg');">
             <div class="flex flex-col xl:flex-row items-center gap-16 justify-between px-6">
-                <img src="/img/dw-logo.svg" alt="DevWorks Studio | Agencia de diseño web en Piedras Negras" class="w-30 h-auto">
+                <NuxtImg src="/img/dw-logo.svg" format="webp" alt="DevWorks Studio | Agencia de diseño web en Piedras Negras" class="w-30 h-auto" />
                 <div class="flex items-center gap-4">
-                    <Button href="/" target="_blank" icon="ic:outline-facebook" styles="!p-3"></Button>
-                    <Button href="/" target="_blank" icon="mdi:instagram" styles="!p-3"></Button>
+                    <Button href="/" target="_blank" icon="ic:outline-facebook" styles="!p-3" />
+                    <Button href="/" target="_blank" icon="mdi:instagram" styles="!p-3" />
                 </div>
             </div>
             <h5 class="text-sm text-center text-gray-500">2025. Todos los derechos reservados. DevWorks Studio | Agencia de diseño web en Piedras Negras</h5>
@@ -269,23 +272,22 @@ let animation = null
 onMounted(() => {
   nextTick(() => {
     if (window.innerWidth >= 1280) {
+      requestAnimationFrame(() => {
+        const scrollLength = wrapper.value.scrollWidth - window.innerWidth
 
-      // Calculate full horizontal scroll
-      const scrollLength = wrapper.value.scrollWidth - window.innerWidth
-      console.log(scrollLength)
-
-      animation = gsap.to(wrapper.value, {
-        x: `-${scrollLength}px`,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: container.value,
-          start: 'top top',
-          end: `+=${scrollLength}`,
-          scrub: 0.2,
-          pin: true,
-          anticipatePin: 1,
-          // markers: true,
-        },
+        animation = gsap.to(wrapper.value, {
+          x: `-${scrollLength}px`,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: container.value,
+            start: 'top top',
+            end: `+=${scrollLength}`,
+            scrub: 0.2,
+            pin: true,
+            anticipatePin: 1,
+            // markers: true,
+          },
+        })
       })
     }
   })

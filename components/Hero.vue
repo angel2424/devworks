@@ -7,7 +7,7 @@
 
     <div class="w-full h-full flex items-center px-5 md:px-14 pb-14 lg:pt-[112px] max-w-[1600px] md:relative z-[10]">
         <div class="max-w-7xl flex flex-col gap-4">
-            <img src="/img/hero-shape.png" alt="" class="absolute w-[150px] h-[150px] sm:w-[300px] sm:h-[300px]  lg:w-[450px] lg:h-[450px] bottom-14 lg:bottom-auto right-5 md:right-14 lg:top-50%">
+            <NuxtImg src="/img/hero-shape.png" format="webp" alt="Imagen de degradado | Piedras Negras" class="absolute w-[150px] h-[150px] sm:w-[300px] sm:h-[300px]  lg:w-[450px] lg:h-[450px] bottom-14 lg:bottom-auto right-5 md:right-14 lg:top-50%" />
             <h1 class="text-primary text-xl font-medium">Diseño Web en Piedras Negras para Negocios Locales</h1>
             <h2 class="text-[clamp(3.2rem,7vw,5.2rem)] font-semibold cal-sans tracking-wide text-title leading-tight max-w-4xl">
                 Creamos tu sitio web con

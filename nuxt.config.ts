@@ -19,6 +19,16 @@ export default defineNuxtConfig({
         mode: 'css',
         cssLayer: 'base'
     },
+    image: {
+        dir: 'public/img',
+        formats: ['webp', 'avif'],
+        screens: {
+            sm: 320,
+            md: 640,
+            lg: 1024,
+            xl: 1280,
+        },
+    },
     modules: [
       '@nuxt/eslint',
       '@nuxt/fonts',

@@ -2,7 +2,7 @@
   <header class="py-4 px-3 md:px-6 fixed top-0 z-20 w-full bg-white/60 backdrop-blur-xl shadow-sm">
     <div class="flex items-center justify-between gap-6">
       <NuxtLink to="/">
-        <img src="/img/dw-logo.svg" alt="DevWorks logo" class="w-28 md:w-32 ml-4" />
+        <NuxtImg src="/img/dw-logo.svg" format="webp" alt="DevWorks logo | Agencia de diseño web en Piedras Negras Coahuila" class="w-28 md:w-32 ml-4" />
       </NuxtLink>
       <nav class="hidden lg:flex items-center gap-2 bg-white rounded-full px-3 py-2">
         <NuxtLink

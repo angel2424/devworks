@@ -10,6 +10,12 @@
   --color-card: #F0F3FF;
 }
 
+@layer utilities {
+  .will-change-transform {
+    will-change: transform;
+  }
+}
+
 @font-face {
   font-family: 'DM Sans';
   src: url('/fonts/dmsans-400.woff2') format('woff2');
