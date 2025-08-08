@@ -72,7 +72,7 @@ onMounted(() => {
     },
     { threshold: 0.5 }
   )
-  
+
   menu.forEach(item => {
     const section = document.querySelector(item.href)
     if (section) observer.observe(section)

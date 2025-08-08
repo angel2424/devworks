@@ -59,7 +59,7 @@
                     <h2 class="!text-3xl font-medium text-blue">Creamos soluciones digitales que impulsan tu marca</h2>
                 </div>
                 <div class="flex-1 text-base font-light">
-                    <p>Cada negocio es único, y por eso nuestras soluciones también lo son. En DevWorks Studio te acompañamos desde el primer clic: analizamos tu presencia en línea, entendemos tus objetivos y diseñamos un sitio web estratégico que realmente funcione para ti.
+                    <p>Cada negocio es único, y por eso nuestras soluciones también lo son. En DevWorks Studio te acompañamos desde el primer clic: analizamos tu presencia en línea, entendemos tus objetivos y diseñamos un sitio web estratégico que realmente funcione para ti. Nuestra meta es brindar el mejor servicio de diseño de sitios web para negocios en Piedras Negras.
                     </p>
                 </div>
             </div>
@@ -75,7 +75,7 @@
                         <div class="flex-1 max-w-3xl flex flex-col gap-8">
                             <p class="text-base text-primary/65 italic">👤 {{ service?.target_audience }}</p>
                         </div>
-                        <Button href="/contacto" icon="ic:outline-whatsapp" class="w-fit h-fit mt-8">Cotizar servicio</Button>
+                        <Button :href="whatsAppUrl" target="_blank" icon="ic:outline-whatsapp" class="w-fit h-fit mt-8">Cotizar servicio</Button>
                     </div>
                 </div>
             </div>
@@ -86,7 +86,7 @@
             <div class="text-blue mt-12 grid grid-cols-1 xl:grid-cols-2 gap-16 w-full">
                 <div v-for="(project, index) in projects" :key="index" class="flex flex-col gap-8">
                     <div class="flex justify-center items-center p-14 bg-gradient-to-br from-primary/10 to-primary/20 rounded-2xl overflow-hidden">
-                        <img :src="`/img/${project?.image}`" alt="" class="w-auto h-96 object-contain rounded-2xl">
+                        <img :src="`/img/${project?.image}`" :alt="project?.alt" class="w-auto h-96 object-contain rounded-2xl">
                     </div>
                     <div class="flex justify-between items-center">
                         <div>
@@ -132,9 +132,9 @@
             <div class="flex flex-col gap-8">
                 <h2 class="!text-5xl font-bold text-blue max-w-4xl">¿Listo para aumentar tu presencia en linea?</h2>
                 <p class="text-lg font-light max-w-3xl">Contáctanos en Whatsapp por el siguiente botón o al numero de abajo para agendar la llamada inicial (sin compromiso 😉)</p>
-                <div class="flex flex-col xl:flex-row items-center justify-between mt-24">
-                    <Button href="/" target="_blank" icon="ic:outline-whatsapp" class="w-fit h-fit !px-4 !py-3">Solicita tu cotización por WhatsApp</Button>
-                    <div class="flex items-center gap-6 text-primary text-base">
+                <div class="flex flex-col xl:flex-row items-center justify-between mt-24 gap-12">
+                    <Button :href="whatsAppUrl" target="_blank" icon="ic:outline-whatsapp" class="w-fit h-fit !px-4 !py-3">Solicita tu cotización por WhatsApp</Button>
+                    <div class="flex items-center flex-col md:flex-row gap-6 text-primary text-base">
                         <div class="flex items-center gap-3">
                             <Icon name="ic:outline-email" size="1.2rem" class="z-10" />
                             <a href="mailto:contacto@devworksstudio.site">contacto@devworksstudio.site</a>
@@ -150,9 +150,16 @@
         <div class="px-5 md:px-14">
             <span class="inline-block bg-primary/30 h-[1px] w-full mt-3 mb-16" />
         </div>
-        <section class="pb-20 pt-20 flex flex-col md:items-center px-5 md:px-14 object-contain object-center" style="background-image: url('/img/footer-bg.jpg');">
-            <img src="/img/dw-logo.svg" alt="DevWorks Studio | Agencia de diseño web en Piedras Negras">
-        </section>
+        <footer class="pb-20 pt-20 px-5 md:px-14 bg-no-repeat bg-center bg-cover xl:bg-contain object-center flex flex-col gap-16" style="background-image: url('/img/footer-bg.jpg');">
+            <div class="flex flex-col xl:flex-row items-center gap-16 justify-between px-6">
+                <img src="/img/dw-logo.svg" alt="DevWorks Studio | Agencia de diseño web en Piedras Negras" class="w-30 h-auto">
+                <div class="flex items-center gap-4">
+                    <Button href="/" target="_blank" icon="ic:outline-facebook" styles="!p-3"></Button>
+                    <Button href="/" target="_blank" icon="mdi:instagram" styles="!p-3"></Button>
+                </div>
+            </div>
+            <h5 class="text-sm text-center text-gray-500">2025. Todos los derechos reservados. DevWorks Studio | Agencia de diseño web en Piedras Negras</h5>
+        </footer>
     </main>
 </template>
 
@@ -166,27 +173,74 @@ import processCards from '../assets/json/process-cards.json'
 import services from '../assets/json/services.json'
 import projects from '../assets/json/projects.json'
 
+const phoneNumber = '5218783821281'
+const message = 'Hola, me interesa cotizar una página web personalizada.'
+
+const whatsAppUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+
 onMounted(() => {
   gsap.registerPlugin(ScrollTrigger)
 })
 
 useHead({
+  title: 'Diseño Web en Piedras Negras | DevWorks Studio',
+  meta: [
+    {
+      name: 'description',
+      content: 'Agencia especializada en diseño de páginas web en Piedras Negras. Creamos sitios personalizados, responsivos y optimizados para negocios locales.'
+    },
+    {
+      name: 'keywords',
+      content: 'Diseño web Piedras Negras, agencia web Piedras Negras, desarrollo web Piedras Negras, páginas web para negocios, sitios web Coahuila, diseño personalizado de sitios, mantenimiento web'
+    },
+    {
+      name: 'author',
+      content: 'DevWorks Studio'
+    },
+    {
+      property: 'og:title',
+      content: 'Diseño Web en Piedras Negras | DevWorks Studio'
+    },
+    {
+      property: 'og:description',
+      content: 'Sitios web personalizados que generan resultados reales para negocios en Piedras Negras. Solicita tu demo gratuito.'
+    },
+    {
+      property: 'og:image',
+      content: '/img/og-diseño-web-piedrasnegras.png'
+    },
+    {
+      property: 'og:url',
+      content: 'https://devworksstudio.site'
+    },
+    {
+      property: 'og:type',
+      content: 'website'
+    }
+  ],
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://devworksstudio.site'
+    }
+  ],
   script: [
     {
       type: 'application/ld+json',
       children: JSON.stringify({
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
+        "@type": "WebDesignService",
         "name": "DevWorks Studio",
-        "image": "https://devworks-studio.netlify.app/your-logo-or-cover.jpg",
-        "url": "https://devworks-studio.netlify.app",
-        "description": "Diseño web profesional, UI/UX y desarrollo para negocios en Piedras Negras. Rápido, personalizado y enfocado en generar clientes.",
+        "image": "https://devworksstudio.site/img/og-diseño-web-piedrasnegras.png",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Piedras Negras",
           "addressRegion": "Coahuila",
           "addressCountry": "MX"
         },
+        "url": "https://devworksstudio.site",
+        "telephone": "+528783821281",
+        "description": "Diseño de páginas web en Piedras Negras. Creamos sitios modernos, responsivos y efectivos para negocios locales.",
         "areaServed": {
           "@type": "Place",
           "name": "Piedras Negras, Coahuila"
@@ -194,7 +248,7 @@ useHead({
         "hasMap": "https://goo.gl/maps/zZexample",
         "contactPoint": {
           "@type": "ContactPoint",
-          "telephone": "+52-1-878-382-1281",
+          "telephone": "+52-878-382-1281",
           "contactType": "Customer Service",
           "availableLanguage": ["Spanish", "English"]
         },

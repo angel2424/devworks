@@ -18,5 +18,14 @@ export default defineNuxtConfig({
       '@nuxt/icon',
       '@nuxt/image',
       'shadcn-nuxt',
-    ]
+      'nuxt-gtag',
+      '@nuxtjs/sitemap',
+    ],
+    sitemap: {
+        siteUrl: 'https://devworksstudio.site',
+        gzip: true,
+        routes: [
+            '/',
+        ]
+  }
 })

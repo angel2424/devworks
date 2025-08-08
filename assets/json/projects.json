@@ -5,7 +5,8 @@
         "description": "Diseñamos y desarrollamos el sitio web oficial del municipio de Allende Coahuila, con un diseño moderno y funcional. Incluye información sobre servicios, noticias y tramites. Se integró un sistema de gestión de contenidos para facilitar la actualización de la información.",
         "link": "https://allendecoahuila.com/",
         "type": "Diseño/Desarrollo Web",
-        "category": "Sitio Municipal"
+        "category": "Sitio Municipal",
+        "alt": "Sitio web para el municipio de Allende, Coahuila diseñado por DevWorks Studio"
     },
     {
         "image": "goodmemx.jpg",
@@ -13,7 +14,8 @@
         "description": "Diseñamos y desarrollamos un sitio web para Good Memories, un emprendimiento dedicado a la fotografía y video de eventos. El sitio incluye una galería de trabajos, información de servicios y un formulario de contacto.",
         "link": "https://goodmemx.devworksstudio.site",
         "type": "Diseño/Desarrollo Web",
-        "category": "Fotografía"
+        "category": "Fotografía",
+        "alt": "Diseño web para estudio de fotografía Good Memories en Piedras Negras"
     },
     {
         "image": "wedding_invitation.jpg",
@@ -21,7 +23,8 @@
         "description": "Trabajamos en crear una opción para que las parejas que estén por casarse, puedan compartir toda la información de su día especial.",
         "link": "https://vowandbeyond.framer.website",
         "type": "Diseño/Desarrollo Web",
-        "category": "Design"
+        "category": "Design",
+        "alt": "Diseño web para invitación digital para bodas en Piedras Negras, diseñado por DevWorks Studio"
     },
     {
         "image": "bible-display.png",
@@ -29,6 +32,7 @@
         "description": "Diseñamos y desarrollamos esta herramienta sencilla y moderna que ayuda a las iglesias a mostrar pasajes de la Biblia en pantallas de forma clara y organizada durante sus reuniones. Todo se controla fácilmente desde un celular, sin necesidad de programas complicados. Ideal para mantener a la congregación enfocada y conectada con la lectura bíblica en tiempo real.",
         "link": "https://example.com/project1",
         "type": "Diseño/Desarrollo Web",
-        "category": "Photography"
+        "category": "Web App",
+        "alt": "Desarrollo de web app para Bible Display en Piedras Negras, diseñado por DevWorks Studio"
     }
 ]
