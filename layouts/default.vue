@@ -30,7 +30,7 @@
         {
             rel: 'preconnect',
             href: 'https://api.iconify.design',
-            crossorigin
+            crossorigin: "anonymous"
         },
         {
             rel: 'icon',
