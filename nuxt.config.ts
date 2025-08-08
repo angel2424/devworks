@@ -3,9 +3,12 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
      ssr: false,
-        nitro: {
-            preset: 'static'
-        },
+    nitro: {
+        preset: 'static'
+    },
+    site: {
+        url: 'https://devworksstudio.site'
+    },
     compatibilityDate: '2024-11-01',
     devtools: { enabled: true },
     css: ['~/assets/css/global.css'],
@@ -29,14 +32,14 @@ export default defineNuxtConfig({
         id: 'G-TZPJKZ4ZJH',
         config: {
         anonymize_ip: true,
-        },
-        debug: false,
+        }
     },
     sitemap: {
-        siteUrl: 'https://devworksstudio.site',
+        site: {
+            url: 'https://devworksstudio.site'
+        },
         gzip: true,
-        routes: [
-            '/',
-        ]
-  }
+        xsl: false, // 👈 Desactiva el archivo style.xsl que está fallando
+        routes: ['/'] // Si aún no tienes rutas dinámicas
+    }
 })
