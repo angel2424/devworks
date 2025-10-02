@@ -1,27 +1,27 @@
 [
-  {
-    "name": "Home",
-    "href": "#hero",
-    "icon": "fa6-solid:house"
-  },
-  {
-    "name": "Que ofrecemos",
-    "href": "#que-ofrecemos",
-    "icon": "mdi:offer"
-  },
-  {
-    "name": "Nuestro Proceso",
-    "href": "#nuestro-proceso",
-    "icon": "home"
-  },
-  {
-    "name": "Servicios",
-    "href": "#servicios",
-    "icon": "home"
-  },
-  {
-    "name": "Contacto",
-    "href": "#contacto",
-    "icon": "home"
-  }
+	{
+		"name": "Home",
+		"href": "#hero",
+		"icon": "fa6-solid:house"
+	},
+	{
+		"name": "Que ofrecemos",
+		"href": "#que-ofrecemos",
+		"icon": "mdi:offer"
+	},
+	{
+		"name": "Nuestro Proceso",
+		"href": "#nuestro-proceso",
+		"icon": "home"
+	},
+	{
+		"name": "Servicios",
+		"href": "#servicios",
+		"icon": "home"
+	},
+	{
+		"name": "Contacto",
+		"href": "#contacto",
+		"icon": "home"
+	}
 ]

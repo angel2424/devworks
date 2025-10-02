@@ -1,55 +1,54 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
-import tailwindcss from "@tailwindcss/vite";
+import tailwindcss from "@tailwindcss/vite"
 
 export default defineNuxtConfig({
-     ssr: false,
+    ssr: false,
     nitro: {
-        preset: 'static'
+        preset: "static",
     },
     site: {
-        url: 'https://devworksstudio.site'
+        url: "https://devworksstudio.site",
     },
-    compatibilityDate: '2024-11-01',
+    compatibilityDate: "2024-11-01",
     devtools: { enabled: true },
-    css: ['~/assets/css/global.css'],
+    css: ["~/assets/css/global.css"],
     vite: {
-        plugins: [tailwindcss(),]
+        plugins: [tailwindcss()],
+        css: {
+            devSourcemap: true,
+        },
     },
     icon: {
-        mode: 'css',
-        cssLayer: 'base'
-    },
-    image: {
-        dir: 'public/img',
-        formats: ['webp', 'avif'],
-        screens: {
-            sm: 320,
-            md: 640,
-            lg: 1024,
-            xl: 1280,
-        },
+        mode: "css",
+        cssLayer: "base",
     },
     modules: [
-      '@nuxt/eslint',
-      '@nuxt/fonts',
-      '@nuxt/icon',
-      '@nuxt/image',
-      'shadcn-nuxt',
-      'nuxt-gtag',
-      '@nuxtjs/sitemap',
+        "@nuxt/eslint",
+        "@nuxt/fonts",
+        "@nuxt/icon",
+        "@nuxt/image",
+        "shadcn-nuxt",
+        "nuxt-gtag",
+        "@nuxtjs/sitemap",
     ],
-    gtag: {
-        id: 'G-TZPJKZ4ZJH',
-        config: {
-        anonymize_ip: true,
-        }
-    },
-    sitemap: {
-        site: {
-            url: 'https://devworksstudio.site'
+    image: {
+        domains: ['localhost'],
+        dir: 'public',
+        ipx: {
+            dir: 'public',
         },
-        gzip: true,
-        xsl: false, // 👈 Desactiva el archivo style.xsl que está fallando
-        routes: ['/'] // Si aún no tienes rutas dinámicas
-    }
+        providers: {
+            static: {
+                provider: 'ipx',
+                options: {
+                    dir: 'public',
+                },
+            },
+        },
+    },
+    gtag: {
+        id: "G-TZPJKZ4ZJH",
+        config: {
+            anonymize_ip: true,
+        },
+    },
 })

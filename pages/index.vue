@@ -25,9 +25,8 @@
 						/>
 					</span>
 					<div class="flex justify-center">
-						<NuxtImg
+						<img
 							:src="`/img/${card?.image}`"
-							format="webp"
 							alt="Imagen de oferta | Agencia en Piedras Negras, Coahuila"
 							class="w-28 h-28"
 						/>
@@ -57,9 +56,8 @@
 					class="bg-card border border-border-blue rounded-2xl p-6 flex flex-col gap-4 xl:flex-row xl:min-w-[60vw] xl:w-fit h-full"
 				>
 					<div class="flex justify-center mb-4 xl:mb-0">
-						<NuxtImg
+						<img
 							:src="`/img/${card?.img_url}`"
-							format="webp"
 							alt="Proceso | Agencia de desarrollo web en Piedras Negras"
 							class="w-full xl:min-w-[400px] h-auto object-center object-cover rounded-2xl aspect-video"
 						/>
@@ -173,9 +171,8 @@
 					<div
 						class="flex justify-center items-center p-14 bg-gradient-to-br from-primary/10 to-primary/20 rounded-2xl overflow-hidden"
 					>
-						<NuxtImg
+						<img
 							:src="`/img/${project?.image}`"
-							format="webp"
 							:alt="project?.alt"
 							class="w-auto h-96 object-contain rounded-2xl"
 						/>
@@ -210,15 +207,13 @@
 		<section class="pb-20 pt-20 flex flex-col items-center px-5 md:px-14">
 			<Badge class="mb-5">Ellos ya confiaron en nosotros</Badge>
 			<div class="flex flex-col xl:flex-row gap-8 mt-8">
-				<NuxtImg
+				<img
 					src="/img/logo-allende.png"
-					format="webp"
 					alt="Logo de Allende, Coahuila"
 					class="w-64 h-auto"
 				/>
-				<NuxtImg
+				<img
 					src="/img/logo-goodmemx-piedras-negras.png"
-					format="webp"
 					alt="Logo de Good Memories | Piedras Negras, Coahuila"
 					class="w-64 h-auto"
 				/>
@@ -228,11 +223,11 @@
 			<span class="inline-block bg-primary/30 h-[1px] w-full mt-3 mb-16" />
 		</div>
 		<section
+			id="contacto"
 			class="pb-20 pt-20 flex flex-col xl:flex-row gap-16 xl:gap-32 items-center justify-center px-5 md:px-14"
 		>
-			<NuxtImg
+			<img
 				src="/img/asterisk.png"
-				format="webp"
 				alt="Asset geometrico | Piedras Negras, Coahuila | Agencia Web"
 				class="w-40"
 			/>
@@ -273,7 +268,7 @@
 								size="1.2rem"
 								class="z-10"
 							/>
-							<a href="tel:+528781235015">(878)123-5015</a>
+							<a href="tel:+528781235015">(878) 123-5015</a>
 						</div>
 					</div>
 				</div>
@@ -289,30 +284,29 @@
 			<div
 				class="flex flex-col xl:flex-row items-center gap-16 justify-between px-6"
 			>
-				<NuxtImg
+				<img
 					src="/img/dw-logo.svg"
-					format="webp"
 					alt="DevWorks Studio | Agencia de diseño web en Piedras Negras"
 					class="w-30 h-auto"
 				/>
 				<div class="flex items-center gap-4">
 					<Button
-						href="/"
+						href="https://www.instagram.com/devworksstudio/"
 						target="_blank"
-						icon="ic:outline-facebook"
+						icon="mdi:instagram"
 						styles="!p-3"
 					/>
 					<Button
-						href="/"
+						href="https://www.facebook.com/devworksstudio"
 						target="_blank"
-						icon="mdi:instagram"
+						icon="ic:outline-facebook"
 						styles="!p-3"
 					/>
 				</div>
 			</div>
 			<h5 class="text-sm text-center text-gray-500">
-				2025. Todos los derechos reservados. DevWorks Studio | Agencia de diseño
-				web en Piedras Negras
+				© {{ year }}. Todos los derechos reservados. DevWorks Studio | Agencia
+				de diseño web en Piedras Negras
 			</h5>
 		</footer>
 	</main>
@@ -327,6 +321,9 @@ import offerCards from "../assets/json/offer-cards.json"
 import processCards from "../assets/json/process-cards.json"
 import services from "../assets/json/services.json"
 import projects from "../assets/json/projects.json"
+
+const date = new Date()
+const year = date.getFullYear()
 
 const phoneNumber = "5218781235015"
 const message = "Hola, me interesa cotizar una página web personalizada."
