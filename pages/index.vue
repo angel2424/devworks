@@ -192,11 +192,11 @@
 					</div>
 					<p class="text-base">{{ project?.description }}</p>
 					<Button
-						:href="project?.link"
-						target="_blank"
+						:to="`/projects/${project?.slug}`"
 						icon-right="fa6-solid:chevron-right"
 						class="w-fit h-fit !px-4 !py-3 mt-8"
-						>Visitar sitio</Button
+						@click="scrollToTop"
+						>Ver proyecto</Button
 					>
 				</div>
 			</div>
@@ -321,7 +321,7 @@ import ScrollTrigger from "gsap/ScrollTrigger"
 import offerCards from "../assets/json/offer-cards.json"
 import processCards from "../assets/json/process-cards.json"
 import services from "../assets/json/services.json"
-import projects from "../assets/json/projects.json"
+import baseProjects from "../assets/json/projects.json"
 
 const date = new Date()
 const year = date.getFullYear()
@@ -329,6 +329,29 @@ const year = date.getFullYear()
 const phoneNumber = "528781235015"
 
 const whatsAppUrl = `https://wa.me/${phoneNumber}?text=%F0%9F%9A%80%20%C2%A1Hola!%20Que%20tal.%20Me%20comunico%20directamente%20de%20t%C3%BA%20sitio%20y%20%C2%A1me%20gustar%C3%ADa%20cotizar%20un%20proyecto%20de%20dise%C3%B1o%20web!`
+
+function slugify(text) {
+	return text
+		.toString()
+		.normalize("NFD")
+		.replace(/[\u0300-\u036f]/g, "")
+		.toLowerCase()
+		.replace(/[^a-z0-9]+/g, "-")
+		.replace(/(^-|-$)+/g, "")
+}
+
+const projects = baseProjects.map((p) => ({
+	...p,
+	slug: slugify(p.title),
+}))
+
+const scrollToTop = () => {
+	// Set navigation flag for the target page
+	if (process.client) {
+		sessionStorage.setItem('nuxt-navigation', 'true')
+		console.log('Navigation flag set:', sessionStorage.getItem('nuxt-navigation'))
+	}
+}
 
 onMounted(() => {
 	gsap.registerPlugin(ScrollTrigger)

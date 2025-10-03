@@ -184,7 +184,8 @@
 				<NuxtLink
 					v-for="relatedProject in relatedProjects"
 					:key="relatedProject.slug"
-					:to="`/projects/${project.slug}`"
+					:to="`/projects/${relatedProject.slug}`"
+					@click="scrollToTop"
 					class="flex flex-col gap-8"
 				>
 					<div
@@ -211,10 +212,15 @@
 					</div>
 					<NuxtLink
 						:to="`/projects/${relatedProject.slug}`"
-						icon-right="fa6-solid:chevron-right"
+						@click="scrollToTop"
 						class="w-fit h-fit relative border border-primary text-sm md:text-base !text-white group hover:text-primary px-6 md:px-12 py-4 rounded-full transition-all ease-linear duration-200 overflow-hidden after:bg-primary after:absolute after:z-0 after:w-full after:h-full after:top-0 after:left-0 after:rounded-full hover:after:w-0 hover:scale-105 after:transition-all after:ease-in-out after:duration-300 flex items-center gap-3"
 					>
 						<p class="z-50 group-hover:text-primary">Ver proyecto</p>
+						<Icon
+							name="fa6-solid:chevron-right"
+							size="1.2rem"
+							class="z-10"
+						/>
 					</NuxtLink>
 				</NuxtLink>
 			</div>
@@ -225,6 +231,7 @@
 				<NuxtLink
 					v-if="prev"
 					:to="`/projects/${prev.slug}`"
+					@click="scrollToTop"
 					class="flex items-center gap-2 px-6 py-3 border border-primary text-primary rounded-full hover:bg-primary hover:text-white transition-all duration-200"
 				>
 					<Icon
@@ -241,6 +248,7 @@
 				<NuxtLink
 					v-if="next"
 					:to="`/projects/${next.slug}`"
+					@click="scrollToTop"
 					class="flex items-center gap-2 px-6 py-3 border border-primary text-primary rounded-full hover:bg-primary hover:text-white transition-all duration-200"
 				>
 					Siguiente proyecto
@@ -261,10 +269,38 @@
 </template>
 
 <script setup>
-import { useRoute } from "vue-router"
+import { useRoute, useRouter } from "vue-router"
+import { onMounted } from "vue"
 
 const phoneNumber = "528781235015"
 const whatsAppUrl = `https://wa.me/${phoneNumber}?text=%F0%9F%9A%80%20%C2%A1Hola!%20Que%20tal.%20Me%20comunico%20directamente%20de%20t%C3%BA%20sitio%20y%20%C2%A1me%20gustar%C3%ADa%20cotizar%20un%20proyecto%20de%20dise%C3%B1o%20web!`
+
+// Scroll to top only on navigation, not on refresh
+onMounted(() => {
+	if (process.client) {
+		// Check if this is a navigation by looking at session storage
+		const isNavigation = sessionStorage.getItem('nuxt-navigation') === 'true'
+		console.log('Project page loaded. Navigation flag:', isNavigation)
+		console.log('Session storage:', sessionStorage.getItem('nuxt-navigation'))
+
+		// Also check if we have a referrer (indicates navigation from another page)
+		const hasReferrer = document.referrer && document.referrer.includes(window.location.hostname)
+		console.log('Has referrer:', hasReferrer)
+
+		if (isNavigation || hasReferrer) {
+			console.log('Scrolling to top...')
+			// Add a small delay to ensure the page is fully loaded
+			setTimeout(() => {
+				window.scrollTo({ top: 0, behavior: 'smooth' })
+			}, 100)
+		} else {
+			console.log('No navigation detected, not scrolling')
+		}
+
+		// Clear the navigation flag
+		sessionStorage.removeItem('nuxt-navigation')
+	}
+})
 
 function slugify(text) {
 	return text

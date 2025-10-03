@@ -18,6 +18,7 @@
 					v-for="project in projectCards"
 					:key="project.slug"
 					:to="`/projects/${project.slug}`"
+					@click="scrollToTop"
 					class="flex flex-col gap-8"
 				>
 					<div
@@ -44,9 +45,10 @@
 					</div>
 					<p class="text-base">{{ project?.description }}</p>
 					<Button
-						:href="`/projects/${project.slug}`"
+						:to="`/projects/${project.slug}`"
 						icon-right="fa6-solid:chevron-right"
 						class="w-fit h-fit !px-4 !py-3 mt-8"
+						@click="scrollToTop"
 						>Ver proyecto</Button
 					>
 				</NuxtLink>
@@ -56,6 +58,7 @@
 </template>
 
 <script setup>
+import { onMounted } from "vue"
 import baseProjects from "~/assets/json/projects.json"
 
 function slugify(text) {
@@ -77,6 +80,13 @@ const projectCards = baseProjects.map((p) => ({
 	category: p.category,
 	type: p.type,
 }))
+
+const scrollToTop = () => {
+	// Set navigation flag for the target page
+	if (process.client) {
+		sessionStorage.setItem('nuxt-navigation', 'true')
+	}
+}
 
 useHead({
 	title: "Proyectos | DevWorks Studio",

@@ -5,6 +5,11 @@ export default defineNuxtConfig({
     nitro: {
         preset: "static",
     },
+    router: {
+        options: {
+            scrollBehaviorType: 'smooth'
+        }
+    },
     site: {
         url: "https://devworksstudio.site",
     },
