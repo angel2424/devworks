@@ -1,0 +1,91 @@
+{
+	"slug": "bible-display-web-app",
+	"title": "Bible Display",
+	"tagline": "App web para proyectar pasajes bíblicos de forma simple y clara",
+	"hero": {
+		"image": "/img/bible-display.png",
+		"before": null,
+		"after": null,
+		"stats": [
+			{
+				"label": "Industria",
+				"value": "Iglesias / Ministerios"
+			},
+			{
+				"label": "Servicios",
+				"value": "Producto, UI/UX, Desarrollo"
+			},
+			{
+				"label": "Estado actual",
+				"value": "Primera versión (MVP)"
+			}
+		]
+	},
+	"client": {
+		"name": "Proyecto propio",
+		"about": "Aplicación creada inicialmente para resolver una necesidad dentro de mi iglesia local y que ahora evoluciona como producto para más comunidades.",
+		"location": "México"
+	},
+	"challenge": "En mi iglesia había dificultades para proyectar pasajes: las herramientas existentes eran complejas, poco prácticas y lentas. El reto fue crear una solución sencilla que cualquier voluntario pudiera usar directamente desde el teléfono.",
+	"process": [
+		{
+			"title": "Identificación del problema",
+			"description": "Detecté la necesidad al participar en la proyección de pasajes en mi iglesia."
+		},
+		{
+			"title": "Primera solución",
+			"description": "Apliqué mi experiencia como diseñador y desarrollador para construir un MVP rápido y funcional."
+		},
+		{
+			"title": "Diseño",
+			"description": "UI clara, tipografía grande y alto contraste para pantallas y proyectores."
+		},
+		{
+			"title": "Desarrollo",
+			"description": "Implementé una SPA ligera con caché local, atajos y modo pantalla limpia."
+		},
+		{
+			"title": "Iteración",
+			"description": "Tras el lanzamiento, recogí feedback de mi comunidad e identifiqué mejoras para la siguiente versión."
+		}
+	],
+	"product": {
+		"gallery": ["/img/bible-display.png"],
+		"features": [
+			{
+				"title": "Control desde móvil",
+				"description": "Cambios de pasaje en segundos sin necesidad de PC."
+			},
+			{
+				"title": "Modo pantalla limpia",
+				"description": "Salida clara para proyectores, sin distracciones."
+			},
+			{
+				"title": "Uso offline",
+				"description": "Funciona aun sin conexión estable gracias a la persistencia local."
+			},
+			{
+				"title": "Camino al producto",
+				"description": "Estamos construyendo la versión completa con base de datos bíblica, búsqueda por versículos, múltiples versiones y cuentas multiusuario."
+			}
+		],
+		"demo": "https://bible-display.devworksstudio.site"
+	},
+	"results": {
+		"metrics": [
+			{
+				"label": "Tiempo de preparación",
+				"value": "-40% en reuniones"
+			},
+			{
+				"label": "Errores en proyección",
+				"value": "-60%"
+			}
+		],
+		"summary": "El MVP resolvió de inmediato un problema real en mi iglesia: menos tiempo de preparación, menos errores y mayor confianza para que cualquier voluntario pudiera operar la proyección. Con el feedback recibido, ahora estoy trabajando en la versión SaaS completa para que más iglesias puedan beneficiarse."
+	},
+	"links": {
+		"live": "https://bible-display.devworksstudio.site"
+	},
+	"order": 4
+}

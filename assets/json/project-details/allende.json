@@ -1,0 +1,98 @@
+{
+	"slug": "municipio-de-allende-coahuila",
+	"title": "Municipio de Allende Coahuila",
+	"tagline": "Sitio oficial del municipio de Allende, Coahuila.",
+	"hero": {
+		"image": "/img/allende.png",
+		"before": null,
+		"after": null,
+		"stats": [
+			{
+				"label": "Industria",
+				"value": "Gobierno municipal"
+			},
+			{
+				"label": "Servicios",
+				"value": "UX, UI, Desarrollo"
+			},
+			{
+				"label": "Resultado",
+				"value": "+35% interacción"
+			}
+		]
+	},
+	"client": {
+		"name": "Municipio de Allende, Coahuila",
+		"about": "El Municipio de Allende es un gobierno local en Coahuila, México, que busca fortalecer la comunicación con sus ciudadanos a través de herramientas digitales. Como administración pública, su compromiso es brindar información clara, accesible y fomentar la transparencia en cada una de sus acciones.",
+		"location": "Allende, Coahuila"
+	},
+	"challenge": "El cliente se acercó con la necesidad de un sitio web oficial para el nuevo gobierno municipal (2025-2027). El objetivo principal era transmitir la profesionalidad de la administración entrante y ofrecer a los ciudadanos un portal moderno, accesible y confiable. El sitio debía convertirse en un punto central para consultar noticias, anuncios relevantes y servicios, además de fomentar la transparencia y cercanía del gobierno con la comunidad. Los portales anteriores carecían de estas cualidades, lo que hacía aún más importante crear una plataforma digital que reforzara la confianza y facilitara la comunicación entre gobierno y ciudadanos.",
+	"process": [
+		{
+			"title": "Descubrimiento",
+			"description": "Escuchamos las necesidades del municipio y de los ciudadanos para definir objetivos claros."
+		},
+		{
+			"title": "Estrategia",
+			"description": "Organizamos la información de manera sencilla para que trámites, noticias y servicios sean fáciles de encontrar."
+		},
+		{
+			"title": "Diseño",
+			"description": "Creamos un diseño moderno y accesible que transmite confianza y profesionalismo."
+		},
+		{
+			"title": "Desarrollo",
+			"description": "Construimos un sitio adaptable a cualquier dispositivo y fácil de mantener por el equipo interno."
+		},
+		{
+			"title": "Lanzamiento",
+			"description": "Probamos cada detalle y capacitamos al equipo para asegurar un uso correcto desde el primer día."
+		}
+	],
+	"product": {
+		"gallery": ["/img/allende.png", "/img/allende2.png"],
+		"features": [
+			{
+				"title": "Noticias y Avisos Oficiales",
+				"description": "Publicaciones actualizadas del municipio para mantener informada a la comunidad."
+			},
+			{
+				"title": "Trámites y Directorio Ciudadano",
+				"description": "Directorio institucional y secciones claras para gestionar trámites en línea y localizar dependencias."
+			},
+			{
+				"title": "Transparencia y Rendición de Cuentas",
+				"description": "Espacio dedicado para presupuestos, informes y documentos públicos accesibles."
+			},
+			{
+				"title": "Accesibilidad Universal",
+				"description": "Diseño con buen contraste, tipografía legible y navegación amigable para todos."
+			}
+		],
+
+		"demo": "https://allendecoahuila.com/"
+	},
+	"results": {
+		"metrics": [
+			{
+				"label": "Acceso a trámites",
+				"value": "2 clics desde la página principal"
+			},
+			{ "label": "Publicación de avisos", "value": "  En menos de 3 minutos" },
+			{ "label": "Consultas a servicios", "value": "+27% de interacciones" },
+			{
+				"label": "Confianza ciudadana",
+				"value": "Portal claro y útil"
+			}
+		],
+		"summary": "El portal permite informar y atender a los ciudadanos en tiempo real, con mayor claridad en trámites y una comunicación más cercana. Esto genera confianza, optimiza recursos y demuestra el valor de invertir en una plataforma digital moderna.",
+		"testimonial": {
+			"quote": "Trabajar con DevWorks Studio fue una experiencia muy positiva. Desde el inicio mostraron un gran profesionalismo, escucharon nuestras necesidades y propusieron soluciones claras y creativas. El diseño del portal refleja la seriedad y la identidad de nuestra administración, además de ser fácil de usar tanto para ciudadanos como para nuestro equipo interno. La comunicación siempre fue ágil y cercana, lo que hizo que el proceso fluyera con facilidad. Quedamos muy satisfechos con el resultado y con la forma de trabajo.",
+			"author": "Equipo de Comunicación del Municipio de Allende, Coahuila"
+		}
+	},
+	"links": {
+		"live": "https://allendecoahuila.com/"
+	},
+	"order": 1
+}

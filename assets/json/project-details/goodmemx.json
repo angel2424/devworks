@@ -1,0 +1,91 @@
+{
+	"slug": "good-memories-fotografia",
+	"title": "Good Memories",
+	"tagline": "Portal visual para estudio de foto y video que convierte más clientes locales",
+	"hero": {
+		"image": "/img/goodmemx.jpg",
+		"before": null,
+		"after": null,
+		"stats": [
+			{
+				"label": "Industria",
+				"value": "Fotografía y video"
+			},
+			{
+				"label": "Servicios",
+				"value": "Branding, UI/UX, Desarrollo web"
+			},
+			{
+				"label": "Resultado",
+				"value": "2× más consultas"
+			}
+		]
+	},
+	"client": {
+		"name": "Good Memories",
+		"about": "Emprendimiento de fotografía y video especializado en bodas, XVs y eventos sociales, enfocado en capturar momentos únicos con estilo profesional. Aunque el negocio ya no está activo, el cliente nos permitió seguir mostrando el proyecto bajo nuestro dominio.",
+		"location": "Piedras Negras, Coahuila"
+	},
+	"challenge": "Good Memories necesitaba una presencia digital profesional que proyectara confianza, mostrara su portafolio en dispositivos móviles y convirtiera más visitas en consultas y reservas.",
+	"process": [
+		{
+			"title": "Descubrimiento",
+			"description": "Identificamos al público objetivo y definimos los servicios clave que debían destacarse en el sitio."
+		},
+		{
+			"title": "Estrategia",
+			"description": "Diseñamos una estructura simple y efectiva, priorizando la galería de fotos, testimonios y contacto inmediato."
+		},
+		{
+			"title": "Diseño",
+			"description": "Creamos una estética limpia y moderna, con foco en imágenes de impacto y la voz auténtica de los clientes."
+		},
+		{
+			"title": "Desarrollo",
+			"description": "Construimos un sitio responsive, optimizado para SEO y con carga rápida de imágenes para mejorar la experiencia en móvil."
+		},
+		{
+			"title": "Lanzamiento",
+			"description": "Integramos botones visibles de WhatsApp, configuramos métricas básicas y validamos la usabilidad en distintos dispositivos."
+		}
+	],
+	"product": {
+		"gallery": ["/img/goodmemx.jpg"],
+		"features": [
+			{
+				"title": "Galería optimizada",
+				"description": "Visualización fluida en móvil con carga diferida (lazy load)."
+			},
+			{
+				"title": "CTAs permanentes",
+				"description": "Botones de contacto vía WhatsApp visibles en todo momento."
+			},
+			{
+				"title": "SEO básico",
+				"description": "Etiquetas meta y estructura diseñada para mayor visibilidad en Google."
+			}
+		],
+		"demo": "https://goodmemx.devworksstudio.site"
+	},
+	"results": {
+		"metrics": [
+			{
+				"label": "Consultas recibidas",
+				"value": "+100%"
+			},
+			{
+				"label": "Contactos directos por WhatsApp",
+				"value": "+85%"
+			}
+		],
+		"summary": "El portal duplicó las consultas, facilitó el contacto directo desde móvil y elevó la percepción de marca del estudio en su mercado local. Aunque Good Memories ya no opera, este proyecto sigue activo como demo bajo nuestro dominio con autorización del cliente.",
+		"testimonial": {
+			"quote": "Colaborar con DevWorks Studio fue una experiencia excelente. El sitio refleja quiénes somos y nuestros clientes ahora nos contactan de inmediato por WhatsApp. Nuestras reservas crecieron notablemente.",
+			"author": "Equipo Good Memories"
+		}
+	},
+	"links": {
+		"live": "https://goodmemx.devworksstudio.site"
+	},
+	"order": 2
+}

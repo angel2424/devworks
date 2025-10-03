@@ -314,6 +314,7 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount, nextTick } from "vue"
+import { useRoute } from "vue-router"
 import gsap from "gsap"
 import ScrollTrigger from "gsap/ScrollTrigger"
 
@@ -331,6 +332,29 @@ const whatsAppUrl = `https://wa.me/${phoneNumber}?text=%F0%9F%9A%80%20%C2%A1Hola
 
 onMounted(() => {
 	gsap.registerPlugin(ScrollTrigger)
+})
+
+// Ensure hash navigation from other routes scrolls to the right section with header offset
+const route = useRoute()
+onMounted(() => {
+    if (route.hash) {
+        const start = performance.now()
+        const maxWaitMs = 1500
+        const tryScroll = () => {
+            const target = document.querySelector(route.hash)
+            if (target) {
+                const header = document.querySelector('header')
+                const headerHeight = header?.getBoundingClientRect().height ?? 0
+                const top = target.getBoundingClientRect().top + window.scrollY - (headerHeight + 8)
+                window.scrollTo({ top, left: 0, behavior: 'smooth' })
+                return
+            }
+            if (performance.now() - start < maxWaitMs) {
+                requestAnimationFrame(tryScroll)
+            }
+        }
+        requestAnimationFrame(tryScroll)
+    }
 })
 
 useHead({

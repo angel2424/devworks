@@ -17,6 +17,7 @@
 					v-for="(item, index) in menu"
 					:key="index"
 					:to="item.href"
+					@click="() => onNavClick(item, $event)"
 					:class="[
 						'px-5 py-2 text-sm rounded-full transition-colors duration-200 hover:bg-primary hover:text-white',
 						activeSection === item.href ? 'bg-primary text-white' : '',
@@ -61,7 +62,12 @@
 							:key="index"
 							:to="item.href"
 							class="text-xl text-gray-800 font-normal hover:text-primary hover:font-bold transition-all ease-linear duration-100"
-							@click="isOpen = false"
+							@click="
+								() => {
+									onNavClick(item, $event)
+									isOpen = false
+								}
+							"
 						>
 							{{ item.name }}
 						</NuxtLink>
@@ -95,17 +101,55 @@
 import { ref, onMounted, onBeforeUnmount } from "vue"
 import menu from "~/assets/json/menu.json"
 import { Sheet, SheetContent, SheetTrigger } from "../components/ui/sheet"
+import { useRoute, useRouter } from "vue-router"
 
 const isOpen = ref(false)
 const activeSection = ref("#hero")
 let observer = null
+const route = useRoute()
+const router = useRouter()
+
+function onNavClick(item, event) {
+	// If clicking "Proyectos" and we are on home ("/"), smooth scroll to section
+	if (item.href === "/projects" && route.path === "/") {
+		event?.preventDefault()
+		activeSection.value = "/projects"
+		return
+	} else if (item.href === "/projects" && route.path !== "/projects") {
+		const section = document.querySelector("")
+		if (section) {
+			activeSection.value = "/projects"
+		}
+	}
+
+	// From non-home routes, navigate to home with the correct hash
+	if (
+		item.href.startsWith("#") &&
+		route.path !== "/" &&
+		item.href !== "#hero"
+	) {
+		event?.preventDefault()
+		router.push({ path: "/", hash: item.href })
+		return
+	} else if (item.href.startsWith("#") && route.path !== "/") {
+		router.push({ path: "/" })
+		activeSection.value = "#hero"
+	}
+
+	// Otherwise, proceed with normal navigation
+}
 
 onMounted(() => {
 	observer = new IntersectionObserver(
 		(entries) => {
 			entries.forEach((entry) => {
 				if (entry.isIntersecting) {
-					activeSection.value = `#${entry.target.id}`
+					// Map the home page `#proyectos` section to the `/projects` nav item
+					if (entry.target.id === "proyectos") {
+						activeSection.value = "/projects"
+					} else {
+						activeSection.value = `#${entry.target.id}`
+					}
 				}
 			})
 		},
@@ -113,9 +157,20 @@ onMounted(() => {
 	)
 
 	menu.forEach((item) => {
-		const section = document.querySelector(item.href)
-		if (section) observer.observe(section)
+		// Only observe sections that start with # (anchors on the same page)
+		if (item.href.startsWith("#")) {
+			const section = document.querySelector(item.href)
+			if (section) observer.observe(section)
+		}
+		if (item.href === "/projects") {
+			activeSection.value = "/projects"
+		}
 	})
+
+	// Explicitly observe the home page projects section so that the
+	// "/projects" menu item highlights while that section is in view
+	const projectsSection = document.querySelector("#proyectos")
+	if (projectsSection) observer.observe(projectsSection)
 })
 
 onBeforeUnmount(() => {

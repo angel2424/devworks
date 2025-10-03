@@ -1,0 +1,91 @@
+{
+	"slug": "invitacion-digital-bodas",
+	"title": "Invitación Digital para Bodas",
+	"tagline": "Landing elegante y moderna para compartir el gran día en un link",
+	"hero": {
+		"image": "/img/wedding_invitation.jpg",
+		"before": null,
+		"after": null,
+		"stats": [
+			{
+				"label": "Industria",
+				"value": "Eventos"
+			},
+			{
+				"label": "Servicios",
+				"value": "UI/UX, Desarrollo"
+			},
+			{
+				"label": "Resultado",
+				"value": "+70% asistencia confirmada"
+			}
+		]
+	},
+	"client": {
+		"name": "Proyecto propio",
+		"about": "Plantilla digital creada inicialmente en colaboración con Good Memories, y actualmente continuada y mejorada por DevWorks Studio como producto propio para parejas que desean una invitación elegante, práctica y personalizable.",
+		"location": "México"
+	},
+	"challenge": "Las invitaciones impresas suelen ser costosas y poco prácticas. El reto fue crear una versión digital bonita, ligera y fácil de personalizar, que incluyera ubicación, itinerario y confirmación de asistencia en un solo link.",
+	"process": [
+		{
+			"title": "Descubrimiento",
+			"description": "Investigamos las necesidades comunes de las parejas: RSVP ágil, ubicación clara, itinerario y personalización."
+		},
+		{
+			"title": "Estrategia",
+			"description": "Diseñamos una plantilla modular adaptable a distintos estilos, colores y tipos de evento."
+		},
+		{
+			"title": "Diseño",
+			"description": "Creamos una UI romántica con tipografía elegante y animaciones sutiles que transmiten emoción."
+		},
+		{
+			"title": "Desarrollo",
+			"description": "Optimizamos el rendimiento para móviles, asegurando carga rápida y despliegue inmediato."
+		},
+		{
+			"title": "Lanzamiento",
+			"description": "Probamos con usuarios reales (parejas y asistentes) para mejorar la experiencia y recoger feedback."
+		}
+	],
+	"product": {
+		"gallery": ["/img/wedding_invitation.jpg"],
+		"features": [
+			{
+				"title": "RSVP instantáneo",
+				"description": "Los invitados confirman su asistencia en un solo toque."
+			},
+			{
+				"title": "Mapa y dirección",
+				"description": "Integración con Google Maps para llegar fácilmente al evento."
+			},
+			{
+				"title": "Diseño móvil primero",
+				"description": "Pensada para compartirse en WhatsApp y redes sociales."
+			},
+			{
+				"title": "Personalización visual",
+				"description": "Colores, tipografía y secciones ajustables para cada pareja."
+			}
+		],
+		"demo": "https://vowandbeyond.framer.website"
+	},
+	"results": {
+		"metrics": [
+			{
+				"label": "Asistencia confirmada",
+				"value": "Intuitivo para los invitados"
+			},
+			{
+				"label": "Comentarios positivos",
+				"value": "Panel personalizado de RSVP"
+			}
+		],
+		"summary": "La invitación digital facilitó la organización, aumentó la confirmación de asistencia y generó comentarios muy positivos entre los invitados. Nació como colaboración con Good Memories y hoy DevWorks Studio la continúa y ofrece como demo activo."
+	},
+	"links": {
+		"live": "https://vowandbeyond.framer.website"
+	},
+	"order": 3
+}
