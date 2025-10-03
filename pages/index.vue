@@ -1,6 +1,6 @@
 <template>
 	<main class="body">
-		<Hero />
+		<Hero :href="whatsAppUrl" />
 		<section
 			id="que-ofrecemos"
 			class="pb-20 flex flex-col md:items-center px-5 md:px-14"
@@ -325,12 +325,9 @@ import projects from "../assets/json/projects.json"
 const date = new Date()
 const year = date.getFullYear()
 
-const phoneNumber = "5218781235015"
-const message = "Hola, me interesa cotizar una página web personalizada."
+const phoneNumber = "528781235015"
 
-const whatsAppUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-	message
-)}`
+const whatsAppUrl = `https://wa.me/${phoneNumber}?text=%F0%9F%9A%80%20%C2%A1Hola!%20Que%20tal.%20Me%20comunico%20directamente%20de%20t%C3%BA%20sitio%20y%20%C2%A1me%20gustar%C3%ADa%20cotizar%20un%20proyecto%20de%20dise%C3%B1o%20web!`
 
 onMounted(() => {
 	gsap.registerPlugin(ScrollTrigger)
