@@ -438,8 +438,7 @@ useHead({
 				"@context": "https://schema.org",
 				"@type": "WebDesignService",
 				name: "DevWorks Studio",
-				image:
-					"https://devworksstudio.site/img/og-diseño-web-piedrasnegras.png",
+				image: "https://devworksstudio.s3.us-east-2.amazonaws.com/og_image.png",
 				address: {
 					"@type": "PostalAddress",
 					addressLocality: "Piedras Negras",
