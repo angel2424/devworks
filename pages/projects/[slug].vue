@@ -279,26 +279,27 @@ const whatsAppUrl = `https://wa.me/${phoneNumber}?text=%F0%9F%9A%80%20%C2%A1Hola
 onMounted(() => {
 	if (process.client) {
 		// Check if this is a navigation by looking at session storage
-		const isNavigation = sessionStorage.getItem('nuxt-navigation') === 'true'
-		console.log('Project page loaded. Navigation flag:', isNavigation)
-		console.log('Session storage:', sessionStorage.getItem('nuxt-navigation'))
+		const isNavigation = sessionStorage.getItem("nuxt-navigation") === "true"
+		console.log("Project page loaded. Navigation flag:", isNavigation)
+		console.log("Session storage:", sessionStorage.getItem("nuxt-navigation"))
 
 		// Also check if we have a referrer (indicates navigation from another page)
-		const hasReferrer = document.referrer && document.referrer.includes(window.location.hostname)
-		console.log('Has referrer:', hasReferrer)
+		const hasReferrer =
+			document.referrer && document.referrer.includes(window.location.hostname)
+		console.log("Has referrer:", hasReferrer)
 
 		if (isNavigation || hasReferrer) {
-			console.log('Scrolling to top...')
+			console.log("Scrolling to top...")
 			// Add a small delay to ensure the page is fully loaded
 			setTimeout(() => {
-				window.scrollTo({ top: 0, behavior: 'smooth' })
+				window.scrollTo({ top: 0, behavior: "smooth" })
 			}, 100)
 		} else {
-			console.log('No navigation detected, not scrolling')
+			console.log("No navigation detected, not scrolling")
 		}
 
 		// Clear the navigation flag
-		sessionStorage.removeItem('nuxt-navigation')
+		sessionStorage.removeItem("nuxt-navigation")
 	}
 })
 
@@ -398,7 +399,9 @@ useHead({
 		{ property: "og:description", content: project?.tagline || "" },
 		{
 			property: "og:image",
-			content: project?.hero?.image || "/img/og-diseño-web-piedrasnegras.png",
+			content:
+				project?.hero?.image ||
+				"https://devworksstudio.s3.us-east-2.amazonaws.com/og_image.png",
 		},
 		{
 			property: "og:url",

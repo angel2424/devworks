@@ -348,8 +348,11 @@ const projects = baseProjects.map((p) => ({
 const scrollToTop = () => {
 	// Set navigation flag for the target page
 	if (process.client) {
-		sessionStorage.setItem('nuxt-navigation', 'true')
-		console.log('Navigation flag set:', sessionStorage.getItem('nuxt-navigation'))
+		sessionStorage.setItem("nuxt-navigation", "true")
+		console.log(
+			"Navigation flag set:",
+			sessionStorage.getItem("nuxt-navigation")
+		)
 	}
 }
 
@@ -360,24 +363,27 @@ onMounted(() => {
 // Ensure hash navigation from other routes scrolls to the right section with header offset
 const route = useRoute()
 onMounted(() => {
-    if (route.hash) {
-        const start = performance.now()
-        const maxWaitMs = 1500
-        const tryScroll = () => {
-            const target = document.querySelector(route.hash)
-            if (target) {
-                const header = document.querySelector('header')
-                const headerHeight = header?.getBoundingClientRect().height ?? 0
-                const top = target.getBoundingClientRect().top + window.scrollY - (headerHeight + 8)
-                window.scrollTo({ top, left: 0, behavior: 'smooth' })
-                return
-            }
-            if (performance.now() - start < maxWaitMs) {
-                requestAnimationFrame(tryScroll)
-            }
-        }
-        requestAnimationFrame(tryScroll)
-    }
+	if (route.hash) {
+		const start = performance.now()
+		const maxWaitMs = 1500
+		const tryScroll = () => {
+			const target = document.querySelector(route.hash)
+			if (target) {
+				const header = document.querySelector("header")
+				const headerHeight = header?.getBoundingClientRect().height ?? 0
+				const top =
+					target.getBoundingClientRect().top +
+					window.scrollY -
+					(headerHeight + 8)
+				window.scrollTo({ top, left: 0, behavior: "smooth" })
+				return
+			}
+			if (performance.now() - start < maxWaitMs) {
+				requestAnimationFrame(tryScroll)
+			}
+		}
+		requestAnimationFrame(tryScroll)
+	}
 })
 
 useHead({
@@ -408,7 +414,7 @@ useHead({
 		},
 		{
 			property: "og:image",
-			content: "/img/og-diseño-web-piedrasnegras.png",
+			content: "https://devworksstudio.s3.us-east-2.amazonaws.com/og_image.png",
 		},
 		{
 			property: "og:url",

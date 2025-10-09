@@ -84,7 +84,7 @@ const projectCards = baseProjects.map((p) => ({
 const scrollToTop = () => {
 	// Set navigation flag for the target page
 	if (process.client) {
-		sessionStorage.setItem('nuxt-navigation', 'true')
+		sessionStorage.setItem("nuxt-navigation", "true")
 	}
 }
 
@@ -112,7 +112,7 @@ useHead({
 		},
 		{
 			property: "og:image",
-			content: "/img/og-diseño-web-piedrasnegras.png",
+			content: "https://devworksstudio.s3.us-east-2.amazonaws.com/og_image.png",
 		},
 		{
 			property: "og:url",
