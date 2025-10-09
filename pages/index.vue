@@ -403,6 +403,8 @@ useHead({
 			name: "author",
 			content: "DevWorks Studio",
 		},
+
+		// Open Graph (Facebook, LinkedIn)
 		{
 			property: "og:title",
 			content: "Diseño Web en Piedras Negras | DevWorks Studio",
@@ -423,6 +425,37 @@ useHead({
 		{
 			property: "og:type",
 			content: "website",
+		},
+		{
+			property: "og:locale",
+			content: "es_MX",
+		},
+		{
+			property: "og:site_name",
+			content: "DevWorks Studio",
+		},
+
+		// Twitter (X)
+		{
+			name: "twitter:card",
+			content: "summary_large_image",
+		},
+		{
+			name: "twitter:title",
+			content: "Diseño Web en Piedras Negras | DevWorks Studio",
+		},
+		{
+			name: "twitter:description",
+			content:
+				"Agencia de diseño web en Piedras Negras. Creamos sitios modernos y optimizados para tu negocio.",
+		},
+		{
+			name: "twitter:image",
+			content: "https://devworksstudio.s3.us-east-2.amazonaws.com/og_image.png",
+		},
+		{
+			name: "twitter:site",
+			content: "@devworksstudio",
 		},
 	],
 	link: [
@@ -463,7 +496,9 @@ useHead({
 				},
 				sameAs: [
 					"https://www.instagram.com/devworksstudio",
-					"https://www.facebook.com/devowrksstudio",
+					"https://www.facebook.com/devworksstudio",
+					"https://twitter.com/devworksstudio",
+					"https://www.linkedin.com/company/devworksstudio",
 				],
 			}),
 		},
